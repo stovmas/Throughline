@@ -88,14 +88,13 @@
                 el.classList.add('selected');
             }
 
-            // Cover image with fallback
+            // Cover image — full square, no cropping
             const img = document.createElement('img');
             img.className = 'tile-cover';
             img.alt = tile.title;
             img.loading = 'lazy';
             img.src = tile.image;
             img.onerror = function () {
-                // Fallback: styled audiobook cover placeholder
                 const placeholder = document.createElement('div');
                 placeholder.className = 'tile-cover-placeholder';
                 placeholder.style.background = getPlaceholderGradient(realIndex);
@@ -106,14 +105,7 @@
                 this.replaceWith(placeholder);
             };
 
-            // Audible badge
-            const badge = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            badge.setAttribute('class', 'tile-audible-badge');
-            badge.setAttribute('viewBox', '0 0 24 24');
-            badge.innerHTML = `<circle cx="12" cy="12" r="10" stroke="#F8991D" stroke-width="1.5" fill="none" opacity="0.6"/>
-                <circle cx="12" cy="12" r="6" stroke="#F8991D" stroke-width="1" fill="none" opacity="0.6"/>
-                <circle cx="12" cy="12" r="2.5" fill="#F8991D" opacity="0.6"/>`;
-
+            // Title + author below cover
             const info = document.createElement('div');
             info.className = 'tile-info';
             info.innerHTML = `
@@ -122,7 +114,6 @@
             `;
 
             el.appendChild(img);
-            el.appendChild(badge);
             el.appendChild(info);
 
             el.addEventListener('click', () => toggleSelect(realIndex));
