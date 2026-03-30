@@ -717,6 +717,122 @@ body {
 }
 
 /* ============================================
+   ARCHIVE SCREEN
+   ============================================ */
+#archive-screen {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 24px;
+    background: var(--bg-primary);
+}
+
+.archive-content {
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+}
+
+.archive-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.archive-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+    margin-bottom: 4px;
+}
+
+.archive-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+}
+
+.archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.archive-card {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all var(--transition);
+    text-align: left;
+}
+
+.archive-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 12px rgba(212, 148, 10, 0.15);
+    transform: translateY(-1px);
+}
+
+.archive-card.current {
+    border-color: var(--accent);
+    background: rgba(212, 148, 10, 0.06);
+}
+
+.archive-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.archive-card-number {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.archive-card-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.archive-card-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 50px;
+    flex-shrink: 0;
+}
+
+.archive-card-badge.current-badge {
+    background: var(--accent);
+    color: #fff;
+}
+
+.archive-card-badge.past-badge {
+    background: var(--bg-card);
+    color: var(--text-muted);
+}
+
+.archive-card-badge.upcoming-badge {
+    background: var(--bg-card);
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+/* ============================================
    ONE-AWAY HINT
    ============================================ */
 .one-away-banner {

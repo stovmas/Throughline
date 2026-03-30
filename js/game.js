@@ -24,6 +24,7 @@
     const splashScreen = $('splash-screen');
     const gameScreen = $('game-screen');
     const resultScreen = $('result-screen');
+    const archiveScreen = $('archive-screen');
     const gameGrid = $('game-grid');
     const solvedGroups = $('solved-groups');
     const timerEl = $('timer');
@@ -32,6 +33,8 @@
     const deselectBtn = $('deselect-btn');
     const statusMessage = $('status-message');
     const playBtn = $('play-btn');
+    const archiveBtn = $('archive-btn');
+    const archiveBackBtn = $('archive-back-btn');
 
     // ---- Init ----
     function init() {
@@ -45,6 +48,8 @@
         playBtn.addEventListener('click', startGame);
         submitBtn.addEventListener('click', handleSubmit);
         deselectBtn.addEventListener('click', deselectAll);
+        archiveBtn.addEventListener('click', showArchive);
+        archiveBackBtn.addEventListener('click', hideArchive);
     }
 
     function startGame() {
@@ -335,6 +340,11 @@
 
         $('share-btn').addEventListener('click', shareResult);
         $('copy-btn').addEventListener('click', copyResult);
+        $('other-puzzles-btn').addEventListener('click', () => {
+            resultScreen.classList.remove('active');
+            archiveScreen.classList.add('active');
+            renderArchive();
+        });
     }
 
     // ---- Share Card (Canvas) ----
@@ -566,6 +576,98 @@
         const div = document.createElement('div');
         div.textContent = str;
         return div.innerHTML;
+    }
+
+    // ---- Archive ----
+    function showArchive() {
+        splashScreen.classList.remove('active');
+        archiveScreen.classList.add('active');
+        renderArchive();
+    }
+
+    function hideArchive() {
+        archiveScreen.classList.remove('active');
+        splashScreen.classList.add('active');
+    }
+
+    function renderArchive() {
+        const list = $('archive-list');
+        list.innerHTML = '';
+        const now = new Date();
+        const currentPuzzle = getCurrentPuzzle();
+
+        PUZZLES.forEach(puzzle => {
+            const card = document.createElement('div');
+            card.className = 'archive-card';
+            const puzzleDate = new Date(puzzle.week);
+            const isCurrent = puzzle.id === currentPuzzle.id;
+            const isUpcoming = puzzleDate > now;
+
+            if (isCurrent) card.classList.add('current');
+
+            const dateStr = puzzleDate.toLocaleDateString('en-US', {
+                month: 'short', day: 'numeric', year: 'numeric'
+            });
+
+            let badgeClass, badgeText;
+            if (isCurrent) {
+                badgeClass = 'current-badge';
+                badgeText = 'This Week';
+            } else if (isUpcoming) {
+                badgeClass = 'upcoming-badge';
+                badgeText = 'Upcoming';
+            } else {
+                badgeClass = 'past-badge';
+                badgeText = 'Play';
+            }
+
+            card.innerHTML = `
+                <div class="archive-card-info">
+                    <span class="archive-card-number">Puzzle #${puzzle.id}</span>
+                    <span class="archive-card-date">${dateStr}</span>
+                </div>
+                <span class="archive-card-badge ${badgeClass}">${badgeText}</span>
+            `;
+
+            if (!isUpcoming) {
+                card.addEventListener('click', () => {
+                    loadPuzzle(puzzle);
+                    archiveScreen.classList.remove('active');
+                    gameScreen.classList.add('active');
+                    renderGrid();
+                    startTimer();
+                });
+            }
+
+            list.appendChild(card);
+        });
+    }
+
+    function loadPuzzle(puzzle) {
+        // Reset game state
+        state.puzzle = puzzle;
+        state.tiles = getPuzzleTiles(puzzle);
+        state.selected = new Set();
+        state.solved = [];
+        state.attemptsLeft = 3;
+        state.timerSeconds = 0;
+        state.timerInterval && clearInterval(state.timerInterval);
+        state.timerInterval = null;
+        state.gameOver = false;
+        state.gameWon = false;
+        state.startTime = null;
+
+        // Reset UI
+        document.querySelector('.puzzle-number').textContent = `#${puzzle.id}`;
+        timerEl.textContent = '0:00';
+        solvedGroups.innerHTML = '';
+        statusMessage.textContent = '';
+        statusMessage.className = 'status-message';
+        attemptsEl.innerHTML = `
+            <span class="attempt-dot active"></span>
+            <span class="attempt-dot active"></span>
+            <span class="attempt-dot active"></span>
+        `;
     }
 
     // ---- Boot ----
