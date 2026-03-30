@@ -490,29 +490,31 @@ body {
     text-overflow: ellipsis;
 }
 
-.tile-see-more {
-    display: none;
-    align-items: center;
-    gap: 3px;
-    font-size: 0.5rem;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-    margin-top: 1px;
-    transition: color 0.15s ease;
-}
-
-.tile-see-more svg {
-    flex-shrink: 0;
-}
-
-.tile-see-more:hover {
-    color: var(--accent-hover);
-    text-decoration: underline;
-}
-
-.grid-tile:hover .tile-see-more {
+/* Audible link icon overlay on tile cover */
+.tile-audible-link {
+    position: absolute;
+    bottom: 32px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.tile-audible-link:hover {
+    background: var(--accent);
+}
+
+.grid-tile:hover .tile-audible-link {
+    opacity: 1;
 }
 
 /* Selection check badge */

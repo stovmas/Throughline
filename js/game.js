@@ -110,25 +110,29 @@
                 this.replaceWith(placeholder);
             };
 
-            // Title + author + see more below cover
-            const audibleUrl = `https://www.audible.com/search?keywords=${encodeURIComponent(tile.title + ' ' + tile.author)}`;
+            // Title + author below cover
             const info = document.createElement('div');
             info.className = 'tile-info';
             info.innerHTML = `
                 <div class="tile-title">${escapeHtml(tile.title)}</div>
                 <div class="tile-author">${escapeHtml(tile.author)}</div>
-                <a class="tile-see-more" href="${audibleUrl}" target="_blank" rel="noopener noreferrer">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    See on Audible
-                </a>
             `;
 
+            // Audible link overlay on cover
+            const audibleUrl = tile.audibleUrl || `https://www.audible.com/search?keywords=${encodeURIComponent(tile.title + ' ' + tile.author)}`;
+            const link = document.createElement('a');
+            link.className = 'tile-audible-link';
+            link.href = audibleUrl;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+
             el.appendChild(img);
+            el.appendChild(link);
             el.appendChild(info);
 
             el.addEventListener('click', (e) => {
-                // Don't toggle selection when clicking the Audible link
-                if (e.target.closest('.tile-see-more')) return;
+                if (e.target.closest('.tile-audible-link')) return;
                 toggleSelect(tileIdx);
             });
             gameGrid.appendChild(el);
@@ -360,7 +364,7 @@
             groupEl.dataset.group = group.color;
 
             const coversHtml = group.titles.map(t => {
-                const audibleUrl = `https://www.audible.com/search?keywords=${encodeURIComponent(t.title + ' ' + t.author)}`;
+                const audibleUrl = t.audibleUrl || `https://www.audible.com/search?keywords=${encodeURIComponent(t.title + ' ' + t.author)}`;
                 return `<a class="result-cover-link" href="${audibleUrl}" target="_blank" rel="noopener noreferrer">
                     <img class="result-group-cover" src="${escapeHtml(t.image)}" alt="${escapeHtml(t.title)}">
                     <span class="result-cover-overlay">

@@ -24,22 +24,26 @@ const PUZZLES = [
                     {
                         title: "Born a Crime",
                         author: "Trevor Noah",
-                        image: "https://m.media-amazon.com/images/I/51Mc--F6zGL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51Mc--F6zGL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Born-a-Crime-Audiobook/B01IW9TQPK"
                     },
                     {
                         title: "Becoming",
                         author: "Michelle Obama",
-                        image: "https://m.media-amazon.com/images/I/414JfiBCutL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/414JfiBCutL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Becoming-Audiobook/B07B3JQZCL"
                     },
                     {
                         title: "Greenlights",
                         author: "Matthew McConaughey",
-                        image: "https://m.media-amazon.com/images/I/51m+AA2gNaL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51m+AA2gNaL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Greenlights-Audiobook/B08DFSSQR4"
                     },
                     {
                         title: "I Am Malala",
                         author: "Malala Yousafzai",
-                        image: "https://m.media-amazon.com/images/I/51qGvwaPcsL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51qGvwaPcsL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/I-Am-Malala-Audiobook/B00FGQO0WE"
                     }
                 ]
             },
@@ -52,22 +56,26 @@ const PUZZLES = [
                     {
                         title: "The Girl on the Train",
                         author: "Paula Hawkins",
-                        image: "https://m.media-amazon.com/images/I/51sKhh+VEML._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51sKhh+VEML._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Girl-on-the-Train-Audiobook/B00QXW5GYY"
                     },
                     {
                         title: "The Silent Patient",
                         author: "Alex Michaelides",
-                        image: "https://m.media-amazon.com/images/I/515SxVllQJS._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/515SxVllQJS._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Silent-Patient-Audiobook/1250317533"
                     },
                     {
                         title: "Shutter Island",
                         author: "Dennis Lehane",
-                        image: "https://m.media-amazon.com/images/I/41qtcYIf9VL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/41qtcYIf9VL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Shutter-Island-Audiobook/B002V8MTGU"
                     },
                     {
                         title: "Behind Her Eyes",
                         author: "Sarah Pinborough",
-                        image: "https://m.media-amazon.com/images/I/61WPXVLvJ7L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/61WPXVLvJ7L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Behind-Her-Eyes-Audiobook/B01N0RCZNY"
                     }
                 ]
             },
@@ -80,22 +88,26 @@ const PUZZLES = [
                     {
                         title: "The Alchemist",
                         author: "Paulo Coelho",
-                        image: "https://m.media-amazon.com/images/I/517pfctTa9L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/517pfctTa9L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Alchemist-Audiobook/B002V0PYEY"
                     },
                     {
                         title: "Siddhartha",
                         author: "Hermann Hesse",
-                        image: "https://m.media-amazon.com/images/I/51E1HxbZhqL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51E1HxbZhqL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Siddhartha-Audiobook/B00005474D"
                     },
                     {
                         title: "Eat Pray Love",
                         author: "Elizabeth Gilbert",
-                        image: "https://m.media-amazon.com/images/I/41IvOuuNGlL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/41IvOuuNGlL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Eat-Pray-Love-Audiobook/B0036GIMS2"
                     },
                     {
                         title: "The Celestine Prophecy",
                         author: "James Redfield",
-                        image: "https://m.media-amazon.com/images/I/416kmgTpD3L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/416kmgTpD3L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Celestine-Prophecy-Audiobook/B002V0Q0WM"
                     }
                 ]
             }
@@ -114,22 +126,26 @@ const PUZZLES = [
                     {
                         title: "The 5 Second Rule",
                         author: "Mel Robbins",
-                        image: "https://m.media-amazon.com/images/I/51dc79x8jsL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51dc79x8jsL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-5-Second-Rule-Audiobook/B06W9GPS7N"
                     },
                     {
                         title: "The 48 Laws of Power",
                         author: "Robert Greene",
-                        image: "https://m.media-amazon.com/images/I/41PfHefFq1L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/41PfHefFq1L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-48-Laws-of-Power-Audiobook/B00X0TKFJI"
                     },
                     {
                         title: "The 7 Habits of Highly Effective People",
                         author: "Stephen R. Covey",
-                        image: "https://m.media-amazon.com/images/I/51OuvCFwyZL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51OuvCFwyZL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-7-Habits-of-Highly-Effective-People-Audiobook/B002V5HAL4"
                     },
                     {
                         title: "The 5AM Club",
                         author: "Robin Sharma",
-                        image: "https://m.media-amazon.com/images/I/519azHGsnGL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/519azHGsnGL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-5-AM-Club-Audiobook/B07BKPWJNR"
                     }
                 ]
             },
@@ -142,22 +158,26 @@ const PUZZLES = [
                     {
                         title: "Rich Dad Poor Dad",
                         author: "Robert T. Kiyosaki",
-                        image: "https://m.media-amazon.com/images/I/51NuMV9SJ8L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51NuMV9SJ8L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Rich-Dad-Poor-Dad-Audiobook/B008BT3C1Q"
                     },
                     {
                         title: "The Psychology of Money",
                         author: "Morgan Housel",
-                        image: "https://m.media-amazon.com/images/I/51JbmSSWlUL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51JbmSSWlUL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Psychology-of-Money-Audiobook/B08D9TFG5K"
                     },
                     {
                         title: "Think and Grow Rich",
                         author: "Napoleon Hill",
-                        image: "https://m.media-amazon.com/images/I/61atv8Q26iL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/61atv8Q26iL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Think-and-Grow-Rich-Audiobook/B002V5D950"
                     },
                     {
                         title: "The Millionaire Next Door",
                         author: "Thomas J. Stanley",
-                        image: "https://m.media-amazon.com/images/I/61vmuiXAbWL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/61vmuiXAbWL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Millionaire-Next-Door-Audiobook/B002V1BPDA"
                     }
                 ]
             },
@@ -170,22 +190,26 @@ const PUZZLES = [
                     {
                         title: "The Mountain Is You",
                         author: "Brianna Wiest",
-                        image: "https://m.media-amazon.com/images/I/41jiySKmibL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/41jiySKmibL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Mountain-Is-You-Audiobook/1705255027"
                     },
                     {
                         title: "Unfuck Yourself",
                         author: "Gary John Bishop",
-                        image: "https://m.media-amazon.com/images/I/51l9kZheEAL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51l9kZheEAL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Unfu-k-Yourself-Audiobook/B0731R1WNT"
                     },
                     {
                         title: "Breaking the Habit of Being Yourself",
                         author: "Dr. Joe Dispenza",
-                        image: "https://m.media-amazon.com/images/I/51RRcIBg93L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51RRcIBg93L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Breaking-the-Habit-of-Being-Yourself-Audiobook/B007CLYA5A"
                     },
                     {
                         title: "I Will Teach You to Be Rich",
                         author: "Ramit Sethi",
-                        image: "https://m.media-amazon.com/images/I/51R5o-WAyjL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51R5o-WAyjL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/I-Will-Teach-You-to-Be-Rich-Audiobook/0593347684"
                     }
                 ]
             }
@@ -204,22 +228,26 @@ const PUZZLES = [
                     {
                         title: "Meditations",
                         author: "Marcus Aurelius",
-                        image: "https://m.media-amazon.com/images/I/51E2LCvj1ZL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51E2LCvj1ZL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Meditations-Audiobook/B004IBRMZS"
                     },
                     {
                         title: "The Daily Stoic",
                         author: "Ryan Holiday",
-                        image: "https://m.media-amazon.com/images/I/514WgltUohL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/514WgltUohL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Daily-Stoic-Audiobook/B01KAFIQE6"
                     },
                     {
                         title: "The Four Agreements",
                         author: "Don Miguel Ruiz",
-                        image: "https://m.media-amazon.com/images/I/61bzSxyLLlL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/61bzSxyLLlL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Four-Agreements-Audiobook/B002VA3GJO"
                     },
                     {
                         title: "The Power of Now",
                         author: "Eckhart Tolle",
-                        image: "https://m.media-amazon.com/images/I/51wk62SpJaL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51wk62SpJaL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Power-of-Now-Audiobook/B002V0PN36"
                     }
                 ]
             },
@@ -232,22 +260,26 @@ const PUZZLES = [
                     {
                         title: "The Hidden Life of Trees",
                         author: "Peter Wohlleben",
-                        image: "https://m.media-amazon.com/images/I/51iXOhWU5JL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51iXOhWU5JL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/The-Hidden-Life-of-Trees-Audiobook/B01F3TH0BA"
                     },
                     {
                         title: "Braiding Sweetgrass",
                         author: "Robin Wall Kimmerer",
-                        image: "https://m.media-amazon.com/images/I/61nD2KiCA5L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/61nD2KiCA5L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Braiding-Sweetgrass-Audiobook/B0748LDJKQ"
                     },
                     {
                         title: "Entangled Life",
                         author: "Merlin Sheldrake",
-                        image: "https://m.media-amazon.com/images/I/61cn02mMKOL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/61cn02mMKOL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Entangled-Life-Audiobook/0593163796"
                     },
                     {
                         title: "American Buffalo",
                         author: "Steven Rinella",
-                        image: "https://m.media-amazon.com/images/I/51RU-740bwL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51RU-740bwL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/American-Buffalo-Audiobook/B002V59UKW"
                     }
                 ]
             },
@@ -260,22 +292,26 @@ const PUZZLES = [
                     {
                         title: "I'm Glad My Mom Died",
                         author: "Jennette McCurdy",
-                        image: "https://m.media-amazon.com/images/I/41clGmWQP6L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/41clGmWQP6L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Im-Glad-My-Mom-Died-Audiobook/B09TRGKFMQ"
                     },
                     {
                         title: "Can't Hurt Me",
                         author: "David Goggins",
-                        image: "https://m.media-amazon.com/images/I/51c4H3VBciL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51c4H3VBciL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Cant-Hurt-Me-Audiobook/B07KKMNZCH"
                     },
                     {
                         title: "Die with Zero",
                         author: "Bill Perkins",
-                        image: "https://m.media-amazon.com/images/I/513+dJrbw6L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/513+dJrbw6L._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Die-with-Zero-Audiobook/0358099765"
                     },
                     {
                         title: "Slaughterhouse-Five",
                         author: "Kurt Vonnegut",
-                        image: "https://m.media-amazon.com/images/I/51AyV7rsScL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51AyV7rsScL._SL500_.jpg",
+                        audibleUrl: "https://www.audible.com/pd/Slaughterhouse-Five-Audiobook/B015ELUYL4"
                     }
                 ]
             }
