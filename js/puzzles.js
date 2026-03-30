@@ -24,7 +24,7 @@ const PUZZLES = [
                     {
                         title: "Born a Crime",
                         author: "Trevor Noah",
-                        image: "https://m.media-amazon.com/images/I/51sKhh+VEML._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51Mc--F6zGL._SL500_.jpg"
                     },
                     {
                         title: "Becoming",
@@ -52,7 +52,7 @@ const PUZZLES = [
                     {
                         title: "The Girl on the Train",
                         author: "Paula Hawkins",
-                        image: "https://m.media-amazon.com/images/I/51Mc--F6zGL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51sKhh+VEML._SL500_.jpg"
                     },
                     {
                         title: "The Silent Patient",
