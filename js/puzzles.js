@@ -24,7 +24,7 @@ const PUZZLES = [
                     {
                         title: "Born a Crime",
                         author: "Trevor Noah",
-                        image: "https://m.media-amazon.com/images/I/51mVFdqJHBL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51sKhh+VEML._SL500_.jpg"
                     },
                     {
                         title: "Becoming",
@@ -52,12 +52,12 @@ const PUZZLES = [
                     {
                         title: "The Girl on the Train",
                         author: "Paula Hawkins",
-                        image: "https://m.media-amazon.com/images/I/51Dqji+BmEL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51Mc--F6zGL._SL500_.jpg"
                     },
                     {
                         title: "The Silent Patient",
                         author: "Alex Michaelides",
-                        image: "https://m.media-amazon.com/images/I/41MZsJpRWUL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/515SxVllQJS._SL500_.jpg"
                     },
                     {
                         title: "Shutter Island",
@@ -85,12 +85,12 @@ const PUZZLES = [
                     {
                         title: "Siddhartha",
                         author: "Hermann Hesse",
-                        image: "https://m.media-amazon.com/images/I/41w+bn3MJSL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51E1HxbZhqL._SL500_.jpg"
                     },
                     {
                         title: "Eat Pray Love",
                         author: "Elizabeth Gilbert",
-                        image: "https://m.media-amazon.com/images/I/51UGbIEi92L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/41IvOuuNGlL._SL500_.jpg"
                     },
                     {
                         title: "The Celestine Prophecy",
