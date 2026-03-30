@@ -95,7 +95,7 @@ const PUZZLES = [
                         title: "Siddhartha",
                         author: "Hermann Hesse",
                         image: "https://m.media-amazon.com/images/I/51E1HxbZhqL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Siddhartha-Audiobook/B002UZYX4C"
+                        audibleUrl: "https://www.audible.com/pd/Siddhartha-Audiobook/1662118910"
                     },
                     {
                         title: "Eat Pray Love",
