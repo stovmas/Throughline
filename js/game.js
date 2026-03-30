@@ -346,70 +346,76 @@
         canvas.width = W;
         canvas.height = H;
 
-        // Background
-        ctx.fillStyle = '#0D1117';
+        // Background — warm cream
+        ctx.fillStyle = '#F5F0E8';
         ctx.fillRect(0, 0, W, H);
 
         // Top accent bar
         const grad = ctx.createLinearGradient(0, 0, W, 0);
-        grad.addColorStop(0, '#F8991D');
-        grad.addColorStop(1, '#FFB347');
+        grad.addColorStop(0, '#D4940A');
+        grad.addColorStop(1, '#E5A61B');
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, W, 6);
 
-        // Logo circles
-        ctx.strokeStyle = '#F8991D';
-        ctx.lineWidth = 2.5;
-        ctx.beginPath(); ctx.arc(W / 2, 80, 28, 0, Math.PI * 2); ctx.stroke();
-        ctx.lineWidth = 2;
-        ctx.beginPath(); ctx.arc(W / 2, 80, 18, 0, Math.PI * 2); ctx.stroke();
-        ctx.fillStyle = '#F8991D';
-        ctx.beginPath(); ctx.arc(W / 2, 80, 7, 0, Math.PI * 2); ctx.fill();
+        // Audible label
+        ctx.fillStyle = '#888888';
+        ctx.font = '500 13px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.letterSpacing = '2px';
+        ctx.fillText('An Audible Original Game', W / 2, 60);
 
         // Title
-        ctx.fillStyle = '#F8991D';
-        ctx.font = 'bold 36px Inter, sans-serif';
-        ctx.textAlign = 'center';
-        ctx.fillText('Throughline', W / 2, 140);
+        ctx.fillStyle = '#1A1A1A';
+        ctx.font = 'bold 40px Inter, sans-serif';
+        ctx.fillText('THROUGHLINE', W / 2, 110);
+
+        // Underline
+        ctx.strokeStyle = '#D4940A';
+        ctx.lineWidth = 3;
+        const textWidth = ctx.measureText('THROUGHLINE').width;
+        ctx.beginPath();
+        ctx.moveTo((W - textWidth) / 2, 118);
+        ctx.lineTo((W + textWidth) / 2, 118);
+        ctx.stroke();
 
         // Puzzle number
-        ctx.fillStyle = '#8B949E';
+        ctx.fillStyle = '#888888';
         ctx.font = '500 18px Inter, sans-serif';
-        ctx.fillText(`Puzzle #${state.puzzle.id}`, W / 2, 170);
+        ctx.fillText(`Puzzle #${state.puzzle.id}`, W / 2, 150);
 
         // Result
         const mistakesMade = 3 - state.attemptsLeft;
         if (state.gameWon) {
-            ctx.fillStyle = '#3FB950';
+            ctx.fillStyle = '#2D8A4E';
             ctx.font = 'bold 28px Inter, sans-serif';
-            ctx.fillText('Solved!', W / 2, 220);
+            ctx.fillText('Solved!', W / 2, 200);
         } else {
-            ctx.fillStyle = '#F85149';
+            ctx.fillStyle = '#C0392B';
             ctx.font = 'bold 28px Inter, sans-serif';
-            ctx.fillText(`${state.solved.length}/3 Found`, W / 2, 220);
+            ctx.fillText(`${state.solved.length}/3 Found`, W / 2, 200);
         }
 
         // Stats
-        ctx.fillStyle = '#E6EDF3';
+        ctx.fillStyle = '#555555';
         ctx.font = '600 20px Inter, sans-serif';
-        ctx.fillText(`${formatTime(state.timerSeconds)}  ·  ${mistakesMade} mistake${mistakesMade !== 1 ? 's' : ''}`, W / 2, 260);
+        ctx.fillText(`${formatTime(state.timerSeconds)}  ·  ${mistakesMade} mistake${mistakesMade !== 1 ? 's' : ''}`, W / 2, 240);
 
         // Group emoji results grid
-        const groupColors = ['#F8991D', '#58A6FF', '#BC8CFF'];
+        const groupColors = ['#D4940A', '#2978B5', '#7B4EA3'];
         const groupLabels = ['🟧', '🟦', '🟪'];
-        let y = 310;
+        let y = 290;
 
         state.puzzle.groups.forEach((group, i) => {
             const solved = state.solved.includes(i);
             const color = groupColors[group.color];
 
             // Group row background
-            ctx.fillStyle = solved ? color + '22' : '#1C212833';
+            ctx.fillStyle = solved ? color + '18' : '#E8E3DA';
             roundRect(ctx, 40, y, W - 80, 60, 10);
             ctx.fill();
 
             // Border
-            ctx.strokeStyle = solved ? color + '66' : '#ffffff10';
+            ctx.strokeStyle = solved ? color + '44' : '#00000010';
             ctx.lineWidth = 1;
             roundRect(ctx, 40, y, W - 80, 60, 10);
             ctx.stroke();
@@ -420,22 +426,21 @@
             ctx.fillText(solved ? '✅' : '❌', 60, y + 38);
 
             // Theme name
-            ctx.fillStyle = solved ? color : '#6E7681';
+            ctx.fillStyle = solved ? color : '#888888';
             ctx.font = `600 16px Inter, sans-serif`;
             ctx.fillText(group.theme, 95, y + 38);
 
             y += 75;
         });
 
-        // Grid visualization (3x4 colored squares showing guesses)
+        // Footer branding
         y += 20;
-        ctx.fillStyle = '#8B949E';
+        ctx.fillStyle = '#888888';
         ctx.font = '500 14px Inter, sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText('audible.com/throughline', W / 2, y + 10);
 
-        // Bottom branding
-        ctx.fillStyle = '#6E7681';
+        ctx.fillStyle = '#AAAAAA';
         ctx.font = '400 12px Inter, sans-serif';
         ctx.fillText('Find the hidden connection between audiobook titles', W / 2, H - 30);
 
