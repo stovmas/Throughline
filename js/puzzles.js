@@ -333,5 +333,8 @@ function getPuzzleTiles(puzzle) {
             });
         });
     });
-    return seededShuffle(tiles, puzzle.id * 12345 + 67890);
+    const shuffled = seededShuffle(tiles, puzzle.id * 12345 + 67890);
+    // Assign stable indices after shuffle
+    shuffled.forEach((tile, i) => { tile.idx = i; });
+    return shuffled;
 }

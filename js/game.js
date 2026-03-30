@@ -84,12 +84,12 @@
         const remainingTiles = state.tiles.filter(t => !state.solved.includes(t.groupIndex));
 
         remainingTiles.forEach((tile, displayIndex) => {
-            const realIndex = state.tiles.indexOf(tile);
+            const tileIdx = tile.idx;
             const el = document.createElement('div');
             el.className = 'grid-tile';
-            el.dataset.index = realIndex;
+            el.dataset.index = tileIdx;
 
-            if (state.selected.has(realIndex)) {
+            if (state.selected.has(tileIdx)) {
                 el.classList.add('selected');
             }
 
@@ -102,7 +102,7 @@
             img.onerror = function () {
                 const placeholder = document.createElement('div');
                 placeholder.className = 'tile-cover-placeholder';
-                placeholder.style.background = getPlaceholderGradient(realIndex);
+                placeholder.style.background = getPlaceholderGradient(tileIdx);
                 placeholder.innerHTML = `
                     <span class="placeholder-title">${escapeHtml(tile.title)}</span>
                     <span class="placeholder-author">${escapeHtml(tile.author)}</span>
@@ -121,7 +121,7 @@
             el.appendChild(img);
             el.appendChild(info);
 
-            el.addEventListener('click', () => toggleSelect(realIndex));
+            el.addEventListener('click', () => toggleSelect(tileIdx));
             gameGrid.appendChild(el);
         });
 
@@ -180,12 +180,18 @@
         const selectedTiles = [...state.selected].map(i => state.tiles[i]);
         const groupCounts = {};
 
+        // Debug: log what was selected to help diagnose issues
+        console.log('[Throughline] Selected:', selectedTiles.map(t => t ? `${t.title} (group ${t.groupIndex})` : 'UNDEFINED'));
+
         selectedTiles.forEach(t => {
-            groupCounts[t.groupIndex] = (groupCounts[t.groupIndex] || 0) + 1;
+            if (t) {
+                groupCounts[t.groupIndex] = (groupCounts[t.groupIndex] || 0) + 1;
+            }
         });
 
         // Check if all 4 belong to the same group
         const groups = Object.entries(groupCounts);
+        console.log('[Throughline] Group counts:', groupCounts);
         if (groups.length === 1 && groups[0][1] === 4) {
             // Correct!
             handleCorrectGuess(parseInt(groups[0][0]));
@@ -614,8 +620,8 @@
                 badgeClass = 'current-badge';
                 badgeText = 'This Week';
             } else if (isUpcoming) {
-                badgeClass = 'upcoming-badge';
-                badgeText = 'Upcoming';
+                badgeClass = 'past-badge';
+                badgeText = 'Play';
             } else {
                 badgeClass = 'past-badge';
                 badgeText = 'Play';
@@ -629,15 +635,13 @@
                 <span class="archive-card-badge ${badgeClass}">${badgeText}</span>
             `;
 
-            if (!isUpcoming) {
-                card.addEventListener('click', () => {
-                    loadPuzzle(puzzle);
-                    archiveScreen.classList.remove('active');
-                    gameScreen.classList.add('active');
-                    renderGrid();
-                    startTimer();
-                });
-            }
+            card.addEventListener('click', () => {
+                loadPuzzle(puzzle);
+                archiveScreen.classList.remove('active');
+                gameScreen.classList.add('active');
+                renderGrid();
+                startTimer();
+            });
 
             list.appendChild(card);
         });
