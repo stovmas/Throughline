@@ -34,12 +34,12 @@ const PUZZLES = [
                     {
                         title: "Greenlights",
                         author: "Matthew McConaughey",
-                        image: "https://m.media-amazon.com/images/I/41hJWfj3SQL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51m+AA2gNaL._SL500_.jpg"
                     },
                     {
                         title: "I Am Malala",
                         author: "Malala Yousafzai",
-                        image: "https://m.media-amazon.com/images/I/518Bkn1ag1L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/51qGvwaPcsL._SL500_.jpg"
                     }
                 ]
             },
@@ -62,12 +62,12 @@ const PUZZLES = [
                     {
                         title: "Shutter Island",
                         author: "Dennis Lehane",
-                        image: "https://m.media-amazon.com/images/I/51VpNlJNg7L._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/41qtcYIf9VL._SL500_.jpg"
                     },
                     {
                         title: "Behind Her Eyes",
                         author: "Sarah Pinborough",
-                        image: "https://m.media-amazon.com/images/I/51b7NloXIFL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/61WPXVLvJ7L._SL500_.jpg"
                     }
                 ]
             },
@@ -95,7 +95,7 @@ const PUZZLES = [
                     {
                         title: "The Celestine Prophecy",
                         author: "James Redfield",
-                        image: "https://m.media-amazon.com/images/I/51eQFEbsTEL._SL500_.jpg"
+                        image: "https://m.media-amazon.com/images/I/416kmgTpD3L._SL500_.jpg"
                     }
                 ]
             }
