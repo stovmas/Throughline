@@ -133,7 +133,7 @@ const PUZZLES = [
                         title: "The 48 Laws of Power",
                         author: "Robert Greene",
                         image: "https://m.media-amazon.com/images/I/41PfHefFq1L._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-48-Laws-of-Power-Audiobook/B00X0TKFJI"
+                        audibleUrl: "https://www.audible.com/pd/The-48-Laws-of-Power-Audiobook/B00WYDJ2YQ"
                     },
                     {
                         title: "The 7 Habits of Highly Effective People",
@@ -145,7 +145,7 @@ const PUZZLES = [
                         title: "The 5AM Club",
                         author: "Robin Sharma",
                         image: "https://m.media-amazon.com/images/I/519azHGsnGL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-5-AM-Club-Audiobook/B07BKPWJNR"
+                        audibleUrl: "https://www.audible.com/pd/The-5-AM-Club-Audiobook/B07KRKJ8W8"
                     }
                 ]
             },
@@ -165,7 +165,7 @@ const PUZZLES = [
                         title: "The Psychology of Money",
                         author: "Morgan Housel",
                         image: "https://m.media-amazon.com/images/I/51JbmSSWlUL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-Psychology-of-Money-Audiobook/B08D9TFG5K"
+                        audibleUrl: "https://www.audible.com/pd/The-Psychology-of-Money-Audiobook/B08D9TXF3H"
                     },
                     {
                         title: "Think and Grow Rich",
@@ -177,7 +177,7 @@ const PUZZLES = [
                         title: "The Millionaire Next Door",
                         author: "Thomas J. Stanley",
                         image: "https://m.media-amazon.com/images/I/61vmuiXAbWL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-Millionaire-Next-Door-Audiobook/B002V1BPDA"
+                        audibleUrl: "https://www.audible.com/pd/The-Millionaire-Next-Door-Audiobook/B002UZKJSG"
                     }
                 ]
             },
@@ -203,7 +203,7 @@ const PUZZLES = [
                         title: "Breaking the Habit of Being Yourself",
                         author: "Dr. Joe Dispenza",
                         image: "https://m.media-amazon.com/images/I/51RRcIBg93L._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Breaking-the-Habit-of-Being-Yourself-Audiobook/B007CLYA5A"
+                        audibleUrl: "https://www.audible.com/pd/Breaking-the-Habit-of-Being-Yourself-Audiobook/B0868ZFF7X"
                     },
                     {
                         title: "I Will Teach You to Be Rich",
