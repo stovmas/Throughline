@@ -493,24 +493,24 @@ body {
 /* Audible link overlay on tile cover */
 .tile-audible-link {
     position: absolute;
-    bottom: 28px;
-    left: 0;
-    right: 0;
+    bottom: 30px;
+    right: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-    padding: 5px 8px;
+    gap: 4px;
+    padding: 4px 8px;
     background: linear-gradient(135deg, rgba(184, 122, 8, 0.92), rgba(212, 148, 10, 0.92));
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    border-radius: 50px;
     color: #fff;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-decoration: none;
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(4px);
     transition: opacity 0.25s ease, transform 0.25s ease;
     z-index: 2;
     white-space: nowrap;
@@ -839,8 +839,8 @@ body {
     }
 
     .tile-audible-link {
-        font-size: 0.5rem;
-        padding: 4px 6px;
+        font-size: 0.45rem;
+        padding: 3px 6px;
         gap: 3px;
         bottom: 22px;
     }
