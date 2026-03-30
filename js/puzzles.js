@@ -31,19 +31,19 @@ const PUZZLES = [
                         title: "Becoming",
                         author: "Michelle Obama",
                         image: "https://m.media-amazon.com/images/I/414JfiBCutL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Becoming-Audiobook/B07B3JQZCL"
+                        audibleUrl: "https://www.audible.com/pd/Becoming-Audiobook/B07B3BCZ9S"
                     },
                     {
                         title: "Greenlights",
                         author: "Matthew McConaughey",
                         image: "https://m.media-amazon.com/images/I/51m+AA2gNaL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Greenlights-Audiobook/B08DFSSQR4"
+                        audibleUrl: "https://www.audible.com/pd/Greenlights-Audiobook/0593294181"
                     },
                     {
                         title: "I Am Malala",
                         author: "Malala Yousafzai",
                         image: "https://m.media-amazon.com/images/I/51qGvwaPcsL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/I-Am-Malala-Audiobook/B00FGQO0WE"
+                        audibleUrl: "https://www.audible.com/pd/I-Am-Malala-Audiobook/B00F9F8K8K"
                     }
                 ]
             },
@@ -69,13 +69,13 @@ const PUZZLES = [
                         title: "Shutter Island",
                         author: "Dennis Lehane",
                         image: "https://m.media-amazon.com/images/I/41qtcYIf9VL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Shutter-Island-Audiobook/B002V8MTGU"
+                        audibleUrl: "https://www.audible.com/pd/Shutter-Island-Audiobook/B002V08GGC"
                     },
                     {
                         title: "Behind Her Eyes",
                         author: "Sarah Pinborough",
                         image: "https://m.media-amazon.com/images/I/61WPXVLvJ7L._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Behind-Her-Eyes-Audiobook/B01N0RCZNY"
+                        audibleUrl: "https://www.audible.com/pd/Behind-Her-Eyes-Audiobook/B01N0BGPO9"
                     }
                 ]
             },
@@ -89,7 +89,7 @@ const PUZZLES = [
                         title: "The Alchemist",
                         author: "Paulo Coelho",
                         image: "https://m.media-amazon.com/images/I/517pfctTa9L._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-Alchemist-Audiobook/B002V0PYEY"
+                        audibleUrl: "https://www.audible.com/pd/The-Alchemist-Audiobook/B002V0Q4LG"
                     },
                     {
                         title: "Siddhartha",
@@ -107,7 +107,7 @@ const PUZZLES = [
                         title: "The Celestine Prophecy",
                         author: "James Redfield",
                         image: "https://m.media-amazon.com/images/I/416kmgTpD3L._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-Celestine-Prophecy-Audiobook/B002V0Q0WM"
+                        audibleUrl: "https://www.audible.com/pd/The-Celestine-Prophecy-Audiobook/1549148427"
                     }
                 ]
             }
@@ -127,7 +127,7 @@ const PUZZLES = [
                         title: "The 5 Second Rule",
                         author: "Mel Robbins",
                         image: "https://m.media-amazon.com/images/I/51dc79x8jsL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-5-Second-Rule-Audiobook/B06W9GPS7N"
+                        audibleUrl: "https://www.audible.com/pd/The-5-Second-Rule-Audiobook/B06VX22V89"
                     },
                     {
                         title: "The 48 Laws of Power",
@@ -191,13 +191,13 @@ const PUZZLES = [
                         title: "The Mountain Is You",
                         author: "Brianna Wiest",
                         image: "https://m.media-amazon.com/images/I/41jiySKmibL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-Mountain-Is-You-Audiobook/1705255027"
+                        audibleUrl: "https://www.audible.com/pd/The-Mountain-Is-You-Audiobook/B09WY6Z8KD"
                     },
                     {
                         title: "Unfuck Yourself",
                         author: "Gary John Bishop",
                         image: "https://m.media-amazon.com/images/I/51l9kZheEAL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Unfu-k-Yourself-Audiobook/B0731R1WNT"
+                        audibleUrl: "https://www.audible.com/pd/Unfu-k-Yourself-Audiobook/B0731R4RFX"
                     },
                     {
                         title: "Breaking the Habit of Being Yourself",
@@ -209,7 +209,7 @@ const PUZZLES = [
                         title: "I Will Teach You to Be Rich",
                         author: "Ramit Sethi",
                         image: "https://m.media-amazon.com/images/I/51R5o-WAyjL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/I-Will-Teach-You-to-Be-Rich-Audiobook/0593347684"
+                        audibleUrl: "https://www.audible.com/pd/I-Will-Teach-You-to-Be-Rich-Audiobook/B07QSC29JT"
                     }
                 ]
             }
@@ -273,7 +273,7 @@ const PUZZLES = [
                         title: "Entangled Life",
                         author: "Merlin Sheldrake",
                         image: "https://m.media-amazon.com/images/I/61cn02mMKOL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Entangled-Life-Audiobook/0593163796"
+                        audibleUrl: "https://www.audible.com/pd/Entangled-Life-Audiobook/059320980X"
                     },
                     {
                         title: "American Buffalo",
@@ -305,7 +305,7 @@ const PUZZLES = [
                         title: "Die with Zero",
                         author: "Bill Perkins",
                         image: "https://m.media-amazon.com/images/I/513+dJrbw6L._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Die-with-Zero-Audiobook/0358099765"
+                        audibleUrl: "https://www.audible.com/pd/Die-with-Zero-Audiobook/0358310369"
                     },
                     {
                         title: "Slaughterhouse-Five",
