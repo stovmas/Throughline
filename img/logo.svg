@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 62">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C17A08"/>
+      <stop offset="40%" stop-color="#D4940A"/>
+      <stop offset="100%" stop-color="#E0A520"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#gold)">
+    <!-- T -->
+    <rect x="0" y="0" width="36" height="8" rx="1.5"/>
+    <rect x="14" y="0" width="8" height="44" rx="1.5"/>
+    <!-- H -->
+    <rect x="40" y="0" width="8" height="44" rx="1.5"/>
+    <rect x="40" y="18" width="24" height="8" rx="1.5"/>
+    <rect x="56" y="0" width="8" height="44" rx="1.5"/>
+    <!-- R -->
+    <rect x="68" y="0" width="8" height="44" rx="1.5"/>
+    <path d="M68,0 h22 a8,8 0 0 1 0,16 h-6 l12,28 h-10 l-12,-28 h-6 z" fill-rule="evenodd"/>
+    <!-- O -->
+    <path d="M104,4 a4,4 0 0 1 4,-4 h18 a4,4 0 0 1 4,4 v36 a4,4 0 0 1 -4,4 h-18 a4,4 0 0 1 -4,-4 z M112,8 v28 h8 v-28 z" fill-rule="evenodd"/>
+    <!-- U -->
+    <rect x="134" y="0" width="8" height="44" rx="1.5"/>
+    <rect x="134" y="36" width="26" height="8" rx="1.5"/>
+    <rect x="152" y="0" width="8" height="44" rx="1.5"/>
+    <!-- G -->
+    <rect x="164" y="0" width="8" height="44" rx="1.5"/>
+    <rect x="164" y="0" width="26" height="8" rx="1.5"/>
+    <rect x="164" y="36" width="26" height="8" rx="1.5"/>
+    <rect x="182" y="20" width="8" height="24" rx="1.5"/>
+    <rect x="176" y="20" width="14" height="8" rx="1.5"/>
+    <!-- H -->
+    <rect x="196" y="0" width="8" height="44" rx="1.5"/>
+    <rect x="196" y="18" width="24" height="8" rx="1.5"/>
+    <rect x="212" y="0" width="8" height="44" rx="1.5"/>
+    <!-- L -->
+    <rect x="224" y="0" width="8" height="44" rx="1.5"/>
+    <rect x="224" y="36" width="22" height="8" rx="1.5"/>
+    <!-- I -->
+    <rect x="250" y="0" width="8" height="44" rx="1.5"/>
+    <!-- N -->
+    <rect x="262" y="0" width="8" height="44" rx="1.5"/>
+    <polygon points="262,0 270,0 292,34 292,0 300,0 300,44 292,44 270,10 270,44 262,44"/>
+    <rect x="292" y="0" width="8" height="44" rx="1.5"/>
+    <!-- E -->
+    <rect x="304" y="0" width="8" height="44" rx="1.5"/>
+    <rect x="304" y="0" width="24" height="8" rx="1.5"/>
+    <rect x="304" y="18" width="20" height="8" rx="1.5"/>
+    <rect x="304" y="36" width="24" height="8" rx="1.5"/>
+    <!-- Underline -->
+    <rect x="0" y="52" width="336" height="4" rx="2" opacity="0.9"/>
+  </g>
+</svg>
