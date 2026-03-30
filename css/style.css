@@ -490,6 +490,31 @@ body {
     text-overflow: ellipsis;
 }
 
+.tile-see-more {
+    display: none;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 1px;
+    transition: color 0.15s ease;
+}
+
+.tile-see-more svg {
+    flex-shrink: 0;
+}
+
+.tile-see-more:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.grid-tile:hover .tile-see-more {
+    display: flex;
+}
+
 /* Selection check badge */
 .grid-tile.selected::after {
     content: '✓';

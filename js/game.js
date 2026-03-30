@@ -110,18 +110,27 @@
                 this.replaceWith(placeholder);
             };
 
-            // Title + author below cover
+            // Title + author + see more below cover
+            const audibleUrl = `https://www.audible.com/search?keywords=${encodeURIComponent(tile.title + ' ' + tile.author)}`;
             const info = document.createElement('div');
             info.className = 'tile-info';
             info.innerHTML = `
                 <div class="tile-title">${escapeHtml(tile.title)}</div>
                 <div class="tile-author">${escapeHtml(tile.author)}</div>
+                <a class="tile-see-more" href="${audibleUrl}" target="_blank" rel="noopener noreferrer">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    See on Audible
+                </a>
             `;
 
             el.appendChild(img);
             el.appendChild(info);
 
-            el.addEventListener('click', () => toggleSelect(tileIdx));
+            el.addEventListener('click', (e) => {
+                // Don't toggle selection when clicking the Audible link
+                if (e.target.closest('.tile-see-more')) return;
+                toggleSelect(tileIdx);
+            });
             gameGrid.appendChild(el);
         });
 
