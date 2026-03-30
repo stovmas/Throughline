@@ -490,31 +490,44 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Audible link icon overlay on tile cover */
+/* Audible link overlay on tile cover */
 .tile-audible-link {
     position: absolute;
-    bottom: 32px;
-    right: 4px;
-    width: 24px;
-    height: 24px;
-    background: rgba(0, 0, 0, 0.65);
-    border-radius: 50%;
+    bottom: 28px;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
+    padding: 5px 8px;
+    background: linear-gradient(135deg, rgba(184, 122, 8, 0.92), rgba(212, 148, 10, 0.92));
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     color: #fff;
-    opacity: 0;
-    transition: opacity 0.15s ease;
-    z-index: 2;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     text-decoration: none;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.tile-audible-link .audible-link-text {
+    display: inline;
 }
 
 .tile-audible-link:hover {
-    background: var(--accent);
+    background: linear-gradient(135deg, rgba(229, 166, 27, 0.95), rgba(212, 148, 10, 0.95));
 }
 
-.grid-tile:hover .tile-audible-link {
+.grid-tile:hover .tile-audible-link,
+.grid-tile.audible-link-visible .tile-audible-link {
     opacity: 1;
+    transform: translateY(0);
 }
 
 /* Selection check badge */
@@ -823,6 +836,13 @@ body {
 
     .tile-info {
         padding: 4px 2px 3px;
+    }
+
+    .tile-audible-link {
+        font-size: 0.5rem;
+        padding: 4px 6px;
+        gap: 3px;
+        bottom: 22px;
     }
 
     .game-controls {

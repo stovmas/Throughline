@@ -125,14 +125,28 @@
             link.href = audibleUrl;
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
-            link.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+            link.innerHTML = `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span class="audible-link-text">See on Audible</span>`;
 
             el.appendChild(img);
             el.appendChild(link);
             el.appendChild(info);
 
+            // Mobile: first tap shows link, second tap on link opens it
+            let touchTimeout;
             el.addEventListener('click', (e) => {
                 if (e.target.closest('.tile-audible-link')) return;
+                // On touch devices, show the Audible link on first tap
+                if ('ontouchstart' in window) {
+                    if (!el.classList.contains('audible-link-visible')) {
+                        // Hide any other visible links first
+                        document.querySelectorAll('.grid-tile.audible-link-visible').forEach(t => t.classList.remove('audible-link-visible'));
+                        el.classList.add('audible-link-visible');
+                        clearTimeout(touchTimeout);
+                        touchTimeout = setTimeout(() => el.classList.remove('audible-link-visible'), 3000);
+                    } else {
+                        el.classList.remove('audible-link-visible');
+                    }
+                }
                 toggleSelect(tileIdx);
             });
             gameGrid.appendChild(el);
