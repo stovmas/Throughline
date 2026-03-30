@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throughline — The Audible Puzzle Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Splash / How to Play -->
+    <div id="splash-screen" class="screen active">
+        <div class="splash-content">
+            <div class="splash-logo">
+                <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="22" stroke="#F8991D" stroke-width="3" fill="none"/>
+                    <circle cx="24" cy="24" r="14" stroke="#F8991D" stroke-width="2.5" fill="none"/>
+                    <circle cx="24" cy="24" r="6" fill="#F8991D"/>
+                </svg>
+                <h1>Throughline</h1>
+            </div>
+            <p class="splash-subtitle">Find the hidden connection between audiobook titles</p>
+
+            <div class="how-to-play">
+                <h2>How to Play</h2>
+                <div class="rules">
+                    <div class="rule">
+                        <span class="rule-icon">📚</span>
+                        <p>Find <strong>3 groups</strong> of <strong>4 audiobook titles</strong> that share a hidden throughline</p>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">👆</span>
+                        <p>Select 4 titles and tap <strong>Submit</strong> to check your guess</p>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">❌</span>
+                        <p>You only get <strong>3 attempts</strong> — choose wisely!</p>
+                    </div>
+                    <div class="rule">
+                        <span class="rule-icon">⏱️</span>
+                        <p>The clock is ticking — solve it fast for bragging rights</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="play-btn" class="btn-primary">Play Puzzle #1</button>
+            <p class="splash-footer">A new puzzle every week</p>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="header-left">
+                <svg class="header-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="22" stroke="#F8991D" stroke-width="3" fill="none"/>
+                    <circle cx="24" cy="24" r="14" stroke="#F8991D" stroke-width="2.5" fill="none"/>
+                    <circle cx="24" cy="24" r="6" fill="#F8991D"/>
+                </svg>
+                <span class="header-title">Throughline</span>
+                <span class="puzzle-number">#1</span>
+            </div>
+            <div class="header-right">
+                <div class="timer" id="timer">0:00</div>
+                <div class="attempts" id="attempts">
+                    <span class="attempt-dot active"></span>
+                    <span class="attempt-dot active"></span>
+                    <span class="attempt-dot active"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Solved Groups (appear above grid when found) -->
+        <div id="solved-groups" class="solved-groups"></div>
+
+        <!-- Grid -->
+        <div id="game-grid" class="game-grid"></div>
+
+        <!-- Controls -->
+        <div class="game-controls">
+            <button id="deselect-btn" class="btn-secondary" disabled>Deselect All</button>
+            <button id="submit-btn" class="btn-primary" disabled>Submit</button>
+        </div>
+
+        <!-- Status Message -->
+        <div id="status-message" class="status-message"></div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="screen">
+        <div class="result-content">
+            <div id="result-icon" class="result-icon"></div>
+            <h2 id="result-title"></h2>
+            <p id="result-subtitle"></p>
+
+            <div id="result-summary" class="result-summary"></div>
+
+            <canvas id="share-canvas" width="600" height="800" style="display:none;"></canvas>
+            <div id="share-card-preview" class="share-card-preview"></div>
+
+            <div class="result-actions">
+                <button id="share-btn" class="btn-primary">Share Result</button>
+                <button id="copy-btn" class="btn-secondary">Copy to Clipboard</button>
+            </div>
+
+            <p class="next-puzzle-timer">Next puzzle in <span id="next-puzzle-countdown"></span></p>
+        </div>
+    </div>
+
+    <script src="js/puzzles.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
