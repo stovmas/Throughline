@@ -235,7 +235,7 @@ const PUZZLES = [
                         title: "The Daily Stoic",
                         author: "Ryan Holiday",
                         image: "https://m.media-amazon.com/images/I/514WgltUohL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-Daily-Stoic-Audiobook/B01KAFIQE6"
+                        audibleUrl: "https://www.audible.com/pd/The-Daily-Stoic-Audiobook/B01M4IDLAG"
                     },
                     {
                         title: "The Four Agreements",
@@ -261,13 +261,13 @@ const PUZZLES = [
                         title: "The Hidden Life of Trees",
                         author: "Peter Wohlleben",
                         image: "https://m.media-amazon.com/images/I/51iXOhWU5JL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/The-Hidden-Life-of-Trees-Audiobook/B01F3TH0BA"
+                        audibleUrl: "https://www.audible.com/pd/The-Hidden-Life-of-Trees-Audiobook/B01LW9E5GY"
                     },
                     {
                         title: "Braiding Sweetgrass",
                         author: "Robin Wall Kimmerer",
                         image: "https://m.media-amazon.com/images/I/61nD2KiCA5L._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Braiding-Sweetgrass-Audiobook/B0748LDJKQ"
+                        audibleUrl: "https://www.audible.com/pd/Braiding-Sweetgrass-Audiobook/B01H478VR0"
                     },
                     {
                         title: "Entangled Life",
@@ -279,7 +279,7 @@ const PUZZLES = [
                         title: "American Buffalo",
                         author: "Steven Rinella",
                         image: "https://m.media-amazon.com/images/I/51RU-740bwL._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/American-Buffalo-Audiobook/B002V59UKW"
+                        audibleUrl: "https://www.audible.com/pd/American-Buffalo-Audiobook/0593150953"
                     }
                 ]
             },
@@ -293,7 +293,7 @@ const PUZZLES = [
                         title: "I'm Glad My Mom Died",
                         author: "Jennette McCurdy",
                         image: "https://m.media-amazon.com/images/I/41clGmWQP6L._SL500_.jpg",
-                        audibleUrl: "https://www.audible.com/pd/Im-Glad-My-Mom-Died-Audiobook/B09TRGKFMQ"
+                        audibleUrl: "https://www.audible.com/pd/Im-Glad-My-Mom-Died-Audiobook/B09VHWHJS2"
                     },
                     {
                         title: "Can't Hurt Me",
