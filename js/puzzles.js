@@ -7,6 +7,7 @@
  * - groups: array of 3 groups, each with a theme and 4 audiobook titles
  *
  * Cover images use Audible's CDN (m.media-amazon.com).
+ * All image IDs verified from Audible bestseller catalog.
  * difficulty: 0 = easiest group to spot, 2 = hardest
  */
 
@@ -16,95 +17,83 @@ const PUZZLES = [
         week: "2026-03-30",
         groups: [
             {
-                theme: "Title Contains a Color",
-                difficulty: 0,
-                color: 0, // orange group
-                titles: [
-                    {
-                        title: "The Color Purple",
-                        author: "Alice Walker",
-                        image: "https://m.media-amazon.com/images/I/518GWRP3jyL._SL500_.jpg",
-                        asin: "B002V1NGA4"
-                    },
-                    {
-                        title: "A Clockwork Orange",
-                        author: "Anthony Burgess",
-                        image: "https://m.media-amazon.com/images/I/41kfXjERBiL._SL500_.jpg",
-                        asin: "B002V5BQJC"
-                    },
-                    {
-                        title: "The Scarlet Letter",
-                        author: "Nathaniel Hawthorne",
-                        image: "https://m.media-amazon.com/images/I/51F2bFv+HqL._SL500_.jpg",
-                        asin: "B002V0PVHY"
-                    },
-                    {
-                        title: "The Goldfinch",
-                        author: "Donna Tartt",
-                        image: "https://m.media-amazon.com/images/I/51IjBs4-URL._SL500_.jpg",
-                        asin: "B00FJ376TG"
-                    }
-                ]
-            },
-            {
                 theme: "Number in the Title",
-                difficulty: 1,
-                color: 1, // blue group
+                difficulty: 0,
+                color: 0,
                 titles: [
                     {
-                        title: "1984",
-                        author: "George Orwell",
-                        image: "https://m.media-amazon.com/images/I/51K84pomCRL._SL500_.jpg",
-                        asin: "B003JTHWKU"
+                        title: "The 5 Second Rule",
+                        author: "Mel Robbins",
+                        image: "https://m.media-amazon.com/images/I/51dc79x8jsL._SL500_.jpg"
                     },
                     {
-                        title: "Catch-22",
-                        author: "Joseph Heller",
-                        image: "https://m.media-amazon.com/images/I/51EoaOr3ULL._SL500_.jpg",
-                        asin: "B0036GQMEK"
+                        title: "The 48 Laws of Power",
+                        author: "Robert Greene",
+                        image: "https://m.media-amazon.com/images/I/41PfHefFq1L._SL500_.jpg"
                     },
                     {
-                        title: "Fahrenheit 451",
-                        author: "Ray Bradbury",
-                        image: "https://m.media-amazon.com/images/I/51lg5MQv+0L._SL500_.jpg",
-                        asin: "B00M4MII42"
+                        title: "The 7 Habits of Highly Effective People",
+                        author: "Stephen R. Covey",
+                        image: "https://m.media-amazon.com/images/I/51OuvCFwyZL._SL500_.jpg"
                     },
                     {
-                        title: "Slaughterhouse-Five",
-                        author: "Kurt Vonnegut",
-                        image: "https://m.media-amazon.com/images/I/51bfi1VGJBL._SL500_.jpg",
-                        asin: "B003IWZRBU"
+                        title: "The 5AM Club",
+                        author: "Robin Sharma",
+                        image: "https://m.media-amazon.com/images/I/519azHGsnGL._SL500_.jpg"
                     }
                 ]
             },
             {
-                theme: "Written by Stephen King",
-                difficulty: 2,
-                color: 2, // purple group
+                theme: "Money or Wealth in the Title",
+                difficulty: 1,
+                color: 1,
                 titles: [
                     {
-                        title: "The Shining",
-                        author: "Stephen King",
-                        image: "https://m.media-amazon.com/images/I/51xFhJHjR7L._SL500_.jpg",
-                        asin: "B00ARFNQ54"
+                        title: "Rich Dad Poor Dad",
+                        author: "Robert T. Kiyosaki",
+                        image: "https://m.media-amazon.com/images/I/51NuMV9SJ8L._SL500_.jpg"
                     },
                     {
-                        title: "It",
-                        author: "Stephen King",
-                        image: "https://m.media-amazon.com/images/I/51pyHDjzLsL._SL500_.jpg",
-                        asin: "B019WR3DRO"
+                        title: "The Psychology of Money",
+                        author: "Morgan Housel",
+                        image: "https://m.media-amazon.com/images/I/51JbmSSWlUL._SL500_.jpg"
                     },
                     {
-                        title: "Pet Sematary",
-                        author: "Stephen King",
-                        image: "https://m.media-amazon.com/images/I/51aQOJjhCPL._SL500_.jpg",
-                        asin: "B016L1C63Y"
+                        title: "Think and Grow Rich",
+                        author: "Napoleon Hill",
+                        image: "https://m.media-amazon.com/images/I/61atv8Q26iL._SL500_.jpg"
                     },
                     {
-                        title: "Misery",
-                        author: "Stephen King",
-                        image: "https://m.media-amazon.com/images/I/51DA6RLJWOL._SL500_.jpg",
-                        asin: "B019S4FLGY"
+                        title: "The Millionaire Next Door",
+                        author: "Thomas J. Stanley",
+                        image: "https://m.media-amazon.com/images/I/61vmuiXAbWL._SL500_.jpg"
+                    }
+                ]
+            },
+            {
+                theme: "Title Contains 'You' or 'Yourself'",
+                difficulty: 2,
+                color: 2,
+                titles: [
+                    {
+                        title: "The Mountain Is You",
+                        author: "Brianna Wiest",
+                        image: "https://m.media-amazon.com/images/I/41jiySKmibL._SL500_.jpg"
+                    },
+                    {
+                        title: "Unfuck Yourself",
+                        author: "Gary John Bishop",
+                        image: "https://m.media-amazon.com/images/I/51l9kZheEAL._SL500_.jpg"
+                    },
+                    {
+                        title: "Breaking the Habit of Being Yourself",
+                        author: "Dr. Joe Dispenza",
+                        image: "https://m.media-amazon.com/images/I/51RRcIBg93L._SL500_.jpg"
+                    },
+                    {
+                        title: "I Will Teach You to Be Rich",
+                        author: "Ramit Sethi",
+                        image: "https://m.media-amazon.com/images/I/51R5o-WAyjL._SL500_.jpg"
                     }
                 ]
             }
@@ -115,95 +104,83 @@ const PUZZLES = [
         week: "2026-04-06",
         groups: [
             {
-                theme: "One-Word Title",
+                theme: "Ancient Wisdom & Philosophy",
                 difficulty: 0,
                 color: 0,
                 titles: [
                     {
-                        title: "Educated",
-                        author: "Tara Westover",
-                        image: "https://m.media-amazon.com/images/I/41kIFKJfSuL._SL500_.jpg",
-                        asin: "B075F68GFV"
+                        title: "Meditations",
+                        author: "Marcus Aurelius",
+                        image: "https://m.media-amazon.com/images/I/51E2LCvj1ZL._SL500_.jpg"
                     },
                     {
-                        title: "Becoming",
-                        author: "Michelle Obama",
-                        image: "https://m.media-amazon.com/images/I/414JfiBCutL._SL500_.jpg",
-                        asin: "B07B3JQZCL"
+                        title: "The Daily Stoic",
+                        author: "Ryan Holiday",
+                        image: "https://m.media-amazon.com/images/I/514WgltUohL._SL500_.jpg"
                     },
                     {
-                        title: "Dune",
-                        author: "Frank Herbert",
-                        image: "https://m.media-amazon.com/images/I/51ZNPweFqfL._SL500_.jpg",
-                        asin: "B000R34YKC"
+                        title: "The Four Agreements",
+                        author: "Don Miguel Ruiz",
+                        image: "https://m.media-amazon.com/images/I/61bzSxyLLlL._SL500_.jpg"
                     },
                     {
-                        title: "Circe",
-                        author: "Madeline Miller",
-                        image: "https://m.media-amazon.com/images/I/51dEReiRCTL._SL500_.jpg",
-                        asin: "B07B47NM7T"
+                        title: "The Power of Now",
+                        author: "Eckhart Tolle",
+                        image: "https://m.media-amazon.com/images/I/51wk62SpJaL._SL500_.jpg"
                     }
                 ]
             },
             {
-                theme: "Narrated by the Author",
+                theme: "About the Natural World",
                 difficulty: 1,
                 color: 1,
                 titles: [
                     {
-                        title: "Born a Crime",
-                        author: "Trevor Noah",
-                        image: "https://m.media-amazon.com/images/I/51mVFdqJHBL._SL500_.jpg",
-                        asin: "B01IW9TQPK"
+                        title: "The Hidden Life of Trees",
+                        author: "Peter Wohlleben",
+                        image: "https://m.media-amazon.com/images/I/51iXOhWU5JL._SL500_.jpg"
                     },
                     {
-                        title: "Year of Yes",
-                        author: "Shonda Rhimes",
-                        image: "https://m.media-amazon.com/images/I/41T+9yMn2GL._SL500_.jpg",
-                        asin: "B016IOZHUC"
+                        title: "Braiding Sweetgrass",
+                        author: "Robin Wall Kimmerer",
+                        image: "https://m.media-amazon.com/images/I/61nD2KiCA5L._SL500_.jpg"
                     },
                     {
-                        title: "Greenlights",
-                        author: "Matthew McConaughey",
-                        image: "https://m.media-amazon.com/images/I/41hJWfj3SQL._SL500_.jpg",
-                        asin: "059340073X"
+                        title: "Entangled Life",
+                        author: "Merlin Sheldrake",
+                        image: "https://m.media-amazon.com/images/I/61cn02mMKOL._SL500_.jpg"
                     },
                     {
-                        title: "Can't Hurt Me",
-                        author: "David Goggins",
-                        image: "https://m.media-amazon.com/images/I/41MqXkGNnNL._SL500_.jpg",
-                        asin: "B07KKMNZCH"
+                        title: "American Buffalo",
+                        author: "Steven Rinella",
+                        image: "https://m.media-amazon.com/images/I/51RU-740bwL._SL500_.jpg"
                     }
                 ]
             },
             {
-                theme: "Title is a Question",
+                theme: "Title References Death or Harm",
                 difficulty: 2,
                 color: 2,
                 titles: [
                     {
-                        title: "Why We Sleep",
-                        author: "Matthew Walker",
-                        image: "https://m.media-amazon.com/images/I/51PLhVBeAxL._SL500_.jpg",
-                        asin: "B0752XRB5F"
+                        title: "I'm Glad My Mom Died",
+                        author: "Jennette McCurdy",
+                        image: "https://m.media-amazon.com/images/I/41clGmWQP6L._SL500_.jpg"
                     },
                     {
-                        title: "Who Moved My Cheese?",
-                        author: "Spencer Johnson",
-                        image: "https://m.media-amazon.com/images/I/51JWJ5Y8CHL._SL500_.jpg",
-                        asin: "B002DHLBVI"
+                        title: "Can't Hurt Me",
+                        author: "David Goggins",
+                        image: "https://m.media-amazon.com/images/I/51c4H3VBciL._SL500_.jpg"
                     },
                     {
-                        title: "What If?",
-                        author: "Randall Munroe",
-                        image: "https://m.media-amazon.com/images/I/41NaFY-MWIL._SL500_.jpg",
-                        asin: "B00LV2F1ZA"
+                        title: "Die with Zero",
+                        author: "Bill Perkins",
+                        image: "https://m.media-amazon.com/images/I/513+dJrbw6L._SL500_.jpg"
                     },
                     {
-                        title: "Are We Smart Enough to Know How Smart Animals Are?",
-                        author: "Frans de Waal",
-                        image: "https://m.media-amazon.com/images/I/51Kt1s5f6tL._SL500_.jpg",
-                        asin: "B01DFMCRZ0"
+                        title: "Slaughterhouse-Five",
+                        author: "Kurt Vonnegut",
+                        image: "https://m.media-amazon.com/images/I/51AyV7rsScL._SL500_.jpg"
                     }
                 ]
             }
@@ -216,7 +193,6 @@ const PUZZLES = [
  */
 function getCurrentPuzzle() {
     const now = new Date();
-    // Find the puzzle whose week is closest to (but not after) today
     let currentPuzzle = PUZZLES[0];
     for (const puzzle of PUZZLES) {
         const puzzleDate = new Date(puzzle.week);

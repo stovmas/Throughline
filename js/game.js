@@ -95,11 +95,14 @@
             img.loading = 'lazy';
             img.src = tile.image;
             img.onerror = function () {
-                // Fallback: colored placeholder
+                // Fallback: styled audiobook cover placeholder
                 const placeholder = document.createElement('div');
                 placeholder.className = 'tile-cover-placeholder';
-                placeholder.textContent = tile.title.charAt(0);
                 placeholder.style.background = getPlaceholderGradient(realIndex);
+                placeholder.innerHTML = `
+                    <span class="placeholder-title">${escapeHtml(tile.title)}</span>
+                    <span class="placeholder-author">${escapeHtml(tile.author)}</span>
+                `;
                 this.replaceWith(placeholder);
             };
 
