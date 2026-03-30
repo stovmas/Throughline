@@ -350,9 +350,16 @@
             groupEl.className = 'result-group';
             groupEl.dataset.group = group.color;
 
-            const coversHtml = group.titles.map(t =>
-                `<img class="result-group-cover" src="${escapeHtml(t.image)}" alt="${escapeHtml(t.title)}" title="${escapeHtml(t.title)} — ${escapeHtml(t.author)}">`
-            ).join('');
+            const coversHtml = group.titles.map(t => {
+                const audibleUrl = `https://www.audible.com/search?keywords=${encodeURIComponent(t.title + ' ' + t.author)}`;
+                return `<a class="result-cover-link" href="${audibleUrl}" target="_blank" rel="noopener noreferrer">
+                    <img class="result-group-cover" src="${escapeHtml(t.image)}" alt="${escapeHtml(t.title)}">
+                    <span class="result-cover-overlay">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        See on Audible
+                    </span>
+                </a>`;
+            }).join('');
 
             groupEl.innerHTML = `
                 <div class="result-group-header">
