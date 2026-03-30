@@ -4,11 +4,10 @@
  * Each puzzle has:
  * - id: unique puzzle number
  * - week: ISO date string for the puzzle week
- * - groups: array of 3 groups, each with a theme and 4 audiobook titles
+ * - groups: array of 3 groups, each with a theme, description, and 4 audiobook titles
  *
  * Cover images use Audible's CDN (m.media-amazon.com).
- * All image IDs verified from Audible bestseller catalog.
- * difficulty: 0 = easiest group to spot, 2 = hardest
+ * difficulty: 0 = easy, 1 = medium, 2 = hard
  */
 
 const PUZZLES = [
@@ -17,7 +16,98 @@ const PUZZLES = [
         week: "2026-03-30",
         groups: [
             {
+                theme: "In Their Own Voices",
+                description: "The author reads the text",
+                difficulty: 0,
+                color: 0,
+                titles: [
+                    {
+                        title: "Born a Crime",
+                        author: "Trevor Noah",
+                        image: "https://m.media-amazon.com/images/I/51mVFdqJHBL._SL500_.jpg"
+                    },
+                    {
+                        title: "Becoming",
+                        author: "Michelle Obama",
+                        image: "https://m.media-amazon.com/images/I/414JfiBCutL._SL500_.jpg"
+                    },
+                    {
+                        title: "Greenlights",
+                        author: "Matthew McConaughey",
+                        image: "https://m.media-amazon.com/images/I/41hJWfj3SQL._SL500_.jpg"
+                    },
+                    {
+                        title: "I Am Malala",
+                        author: "Malala Yousafzai",
+                        image: "https://m.media-amazon.com/images/I/518Bkn1ag1L._SL500_.jpg"
+                    }
+                ]
+            },
+            {
+                theme: "The Ending Rewrites Everything",
+                description: "Endings that make you revisit the entire story",
+                difficulty: 1,
+                color: 1,
+                titles: [
+                    {
+                        title: "The Girl on the Train",
+                        author: "Paula Hawkins",
+                        image: "https://m.media-amazon.com/images/I/51Dqji+BmEL._SL500_.jpg"
+                    },
+                    {
+                        title: "The Silent Patient",
+                        author: "Alex Michaelides",
+                        image: "https://m.media-amazon.com/images/I/41MZsJpRWUL._SL500_.jpg"
+                    },
+                    {
+                        title: "Shutter Island",
+                        author: "Dennis Lehane",
+                        image: "https://m.media-amazon.com/images/I/51VpNlJNg7L._SL500_.jpg"
+                    },
+                    {
+                        title: "Behind Her Eyes",
+                        author: "Sarah Pinborough",
+                        image: "https://m.media-amazon.com/images/I/51b7NloXIFL._SL500_.jpg"
+                    }
+                ]
+            },
+            {
+                theme: "Spiritual Quest in Disguise",
+                description: "Each title is about leaving ordinary life to find something they can\u2019t name yet",
+                difficulty: 2,
+                color: 2,
+                titles: [
+                    {
+                        title: "The Alchemist",
+                        author: "Paulo Coelho",
+                        image: "https://m.media-amazon.com/images/I/517pfctTa9L._SL500_.jpg"
+                    },
+                    {
+                        title: "Siddhartha",
+                        author: "Hermann Hesse",
+                        image: "https://m.media-amazon.com/images/I/41w+bn3MJSL._SL500_.jpg"
+                    },
+                    {
+                        title: "Eat Pray Love",
+                        author: "Elizabeth Gilbert",
+                        image: "https://m.media-amazon.com/images/I/51UGbIEi92L._SL500_.jpg"
+                    },
+                    {
+                        title: "The Celestine Prophecy",
+                        author: "James Redfield",
+                        image: "https://m.media-amazon.com/images/I/51eQFEbsTEL._SL500_.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 2,
+        week: "2026-04-06",
+        groups: [
+            {
                 theme: "Number in the Title",
+                description: "Each title contains a numeral — look past the words",
                 difficulty: 0,
                 color: 0,
                 titles: [
@@ -45,6 +135,7 @@ const PUZZLES = [
             },
             {
                 theme: "Money or Wealth in the Title",
+                description: "Each title literally contains a money-related word",
                 difficulty: 1,
                 color: 1,
                 titles: [
@@ -72,6 +163,7 @@ const PUZZLES = [
             },
             {
                 theme: "Title Contains 'You' or 'Yourself'",
+                description: "The word 'you' hides in each title — even when the genre differs",
                 difficulty: 2,
                 color: 2,
                 titles: [
@@ -100,11 +192,12 @@ const PUZZLES = [
         ]
     },
     {
-        id: 2,
-        week: "2026-04-06",
+        id: 3,
+        week: "2026-04-13",
         groups: [
             {
                 theme: "Ancient Wisdom & Philosophy",
+                description: "Timeless teachings that predate the self-help aisle",
                 difficulty: 0,
                 color: 0,
                 titles: [
@@ -132,6 +225,7 @@ const PUZZLES = [
             },
             {
                 theme: "About the Natural World",
+                description: "Each book listens to what the earth has been saying all along",
                 difficulty: 1,
                 color: 1,
                 titles: [
@@ -159,6 +253,7 @@ const PUZZLES = [
             },
             {
                 theme: "Title References Death or Harm",
+                description: "A dark word hides in plain sight in each title",
                 difficulty: 2,
                 color: 2,
                 titles: [
@@ -232,6 +327,7 @@ function getPuzzleTiles(puzzle) {
                 ...title,
                 groupIndex,
                 theme: group.theme,
+                description: group.description,
                 groupColor: group.color,
                 difficulty: group.difficulty
             });
