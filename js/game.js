@@ -341,6 +341,31 @@
             </div>
         `;
 
+        // Render group breakdown with covers
+        const resultGroups = $('result-groups');
+        resultGroups.innerHTML = '';
+        state.puzzle.groups.forEach((group, i) => {
+            const wasSolved = state.solved.includes(i);
+            const groupEl = document.createElement('div');
+            groupEl.className = 'result-group';
+            groupEl.dataset.group = group.color;
+
+            const coversHtml = group.titles.map(t =>
+                `<img class="result-group-cover" src="${escapeHtml(t.image)}" alt="${escapeHtml(t.title)}" title="${escapeHtml(t.title)} — ${escapeHtml(t.author)}">`
+            ).join('');
+
+            groupEl.innerHTML = `
+                <div class="result-group-header">
+                    <span class="result-group-status">${wasSolved ? '✅' : '❌'}</span>
+                    <span class="result-group-theme">${escapeHtml(group.theme)}</span>
+                </div>
+                <div class="result-group-description">${escapeHtml(group.description)}</div>
+                <div class="result-group-covers">${coversHtml}</div>
+                <div class="result-group-titles">${group.titles.map(t => escapeHtml(t.title)).join(' · ')}</div>
+            `;
+            resultGroups.appendChild(groupEl);
+        });
+
         generateShareCard();
         setupNextPuzzleCountdown();
 
