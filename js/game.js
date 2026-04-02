@@ -131,22 +131,24 @@
             el.appendChild(link);
             el.appendChild(info);
 
-            // Mobile: first tap shows link, second tap on link opens it
-            let touchTimeout;
+            // Mobile: long-press reveals Audible link; normal tap selects tile
+            let pressTimer;
+            let didLongPress = false;
+            el.addEventListener('touchstart', (e) => {
+                didLongPress = false;
+                pressTimer = setTimeout(() => {
+                    didLongPress = true;
+                    document.querySelectorAll('.grid-tile.audible-link-visible').forEach(t => t.classList.remove('audible-link-visible'));
+                    el.classList.add('audible-link-visible');
+                    setTimeout(() => el.classList.remove('audible-link-visible'), 3500);
+                }, 400);
+            }, { passive: true });
+            el.addEventListener('touchend', () => clearTimeout(pressTimer), { passive: true });
+            el.addEventListener('touchmove', () => clearTimeout(pressTimer), { passive: true });
+
             el.addEventListener('click', (e) => {
                 if (e.target.closest('.tile-audible-link')) return;
-                // On touch devices, show the Audible link on first tap
-                if ('ontouchstart' in window) {
-                    if (!el.classList.contains('audible-link-visible')) {
-                        // Hide any other visible links first
-                        document.querySelectorAll('.grid-tile.audible-link-visible').forEach(t => t.classList.remove('audible-link-visible'));
-                        el.classList.add('audible-link-visible');
-                        clearTimeout(touchTimeout);
-                        touchTimeout = setTimeout(() => el.classList.remove('audible-link-visible'), 3000);
-                    } else {
-                        el.classList.remove('audible-link-visible');
-                    }
-                }
+                if (didLongPress) { didLongPress = false; return; }
                 toggleSelect(tileIdx);
             });
             gameGrid.appendChild(el);
